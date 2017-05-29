@@ -90,15 +90,36 @@
                                     <constraint firstAttribute="height" constant="130" id="ayl-Hm-49K"/>
                                 </constraints>
                             </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BfF-X4-RHn">
+                                <rect key="frame" x="16" y="616" width="51" height="31"/>
+                                <connections>
+                                    <action selector="micSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="prR-47-AAu"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kwE-XC-UXL">
+                                <rect key="frame" x="71" y="617" width="290" height="31"/>
+                                <connections>
+                                    <action selector="changeFrequency:" destination="BYZ-38-t0r" eventType="valueChanged" id="A93-f6-BRP"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listening..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akv-fm-nPr">
+                                <rect key="frame" x="145.5" y="344" width="83.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="COU-gD-tpD" firstAttribute="top" secondItem="8a6-KI-EVJ" secondAttribute="bottom" constant="8" id="2Bc-wi-ezX"/>
                             <constraint firstItem="4Dd-Qz-Fyy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="39q-go-7m3"/>
+                            <constraint firstItem="kwE-XC-UXL" firstAttribute="leading" secondItem="BfF-X4-RHn" secondAttribute="trailing" constant="8" id="6nx-FK-7Cz"/>
                             <constraint firstItem="9eg-mj-jcX" firstAttribute="top" secondItem="VL7-3v-c8y" secondAttribute="bottom" constant="8" id="A6i-9I-d0C"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kwE-XC-UXL" secondAttribute="bottom" constant="20" id="AlI-X5-96K"/>
                             <constraint firstItem="TmJ-vn-fgQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BDE-Wq-YH9"/>
                             <constraint firstItem="A6g-I9-Thy" firstAttribute="top" secondItem="9eg-mj-jcX" secondAttribute="bottom" constant="8" id="BKm-Ny-Lpn"/>
                             <constraint firstItem="uWu-qf-Zw7" firstAttribute="top" secondItem="COU-gD-tpD" secondAttribute="bottom" constant="8" id="D8R-xC-qXU"/>
+                            <constraint firstItem="akv-fm-nPr" firstAttribute="top" secondItem="OKN-1g-NDX" secondAttribute="bottom" constant="8" id="HMa-Zt-52k"/>
                             <constraint firstItem="COU-gD-tpD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HTA-G9-len"/>
                             <constraint firstItem="PtF-3B-F9g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IYY-Kl-wJ2"/>
                             <constraint firstItem="VL7-3v-c8y" firstAttribute="top" secondItem="PtF-3B-F9g" secondAttribute="bottom" constant="8" id="K7M-qP-oZP"/>
@@ -107,6 +128,7 @@
                             <constraint firstAttribute="trailing" secondItem="PtF-3B-F9g" secondAttribute="trailing" id="OLl-Oa-MwP"/>
                             <constraint firstItem="VL7-3v-c8y" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="SHO-fz-O7M"/>
                             <constraint firstItem="8a6-KI-EVJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SrF-KH-Y30"/>
+                            <constraint firstItem="akv-fm-nPr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xko-yT-d5F"/>
                             <constraint firstItem="OKN-1g-NDX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Zam-85-3YL"/>
                             <constraint firstItem="VL7-3v-c8y" firstAttribute="top" secondItem="PtF-3B-F9g" secondAttribute="bottom" constant="8" id="cjb-tr-WxI"/>
                             <constraint firstItem="A6g-I9-Thy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ck1-bf-thg"/>
@@ -116,15 +138,19 @@
                             <constraint firstItem="OKN-1g-NDX" firstAttribute="top" secondItem="4Dd-Qz-Fyy" secondAttribute="bottom" constant="8" id="fw0-Ut-Pif"/>
                             <constraint firstItem="cnB-Tg-vLv" firstAttribute="top" secondItem="PtF-3B-F9g" secondAttribute="bottom" constant="8" id="g5i-Nl-rhf"/>
                             <constraint firstItem="cnB-Tg-vLv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gAc-mL-jh0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BfF-X4-RHn" secondAttribute="bottom" constant="20" id="i2s-W6-pti"/>
                             <constraint firstItem="TmJ-vn-fgQ" firstAttribute="top" secondItem="A6g-I9-Thy" secondAttribute="bottom" constant="8" id="j7p-fh-CCm"/>
+                            <constraint firstItem="kwE-XC-UXL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mFS-0B-pEb"/>
                             <constraint firstItem="9eg-mj-jcX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rN4-rI-BN9"/>
                             <constraint firstItem="8a6-KI-EVJ" firstAttribute="top" secondItem="cnB-Tg-vLv" secondAttribute="bottom" constant="8" id="tyL-Nc-pH4"/>
+                            <constraint firstItem="BfF-X4-RHn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wRd-pl-hhI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="amplitudeLabel" destination="9eg-mj-jcX" id="xed-Lg-aVN"/>
                         <outlet property="audioInputPlot" destination="OKN-1g-NDX" id="Zyo-3r-Xv7"/>
                         <outlet property="frequencyLabel" destination="VL7-3v-c8y" id="cqU-Z7-qFW"/>
+                        <outlet property="label" destination="akv-fm-nPr" id="Idz-oz-jxZ"/>
                         <outlet property="noteNameWithFlatsLabel" destination="TmJ-vn-fgQ" id="RmQ-N2-gcd"/>
                         <outlet property="noteNameWithSharpsLabel" destination="A6g-I9-Thy" id="qjg-MO-2wv"/>
                     </connections>
